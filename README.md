@@ -1,6 +1,8 @@
-## Multiverse Elective Project: Automating Text Messages with Amazon SNS and AWS Lambda:
+## Multiverse Elective Project: Automating Text Messages with Amazon SNS and AWS Lambda
 
-This project uses powerful AWS services for a fully automated system for sending SMS notifications. In this documentation, we will go over the steps of this project - the idea is that we use an S3 bucket as a source to be able to upload files, which will then trigger the AWS Lambda which will execute the `sendSNS()` and publish a notification to an AWS SNS topic where we have configured a phone number to recieve a message whenever a subscription is published to the SNS.
+This project uses powerful AWS services for a fully automated system for sending SMS notifications.
+
+In this documentation, we will go over the steps of this project - the idea is that we use an S3 bucket as a source to be able to upload files, which will then trigger the AWS Lambda which will execute the `sendSNS()` and publish a notification to an AWS SNS topic where we have configured a phone number to recieve a message whenever a subscription is published to the SNS.
 
 ### How this service works: 
 
@@ -19,6 +21,7 @@ This project uses powerful AWS services for a fully automated system for sending
 ---
 
 3. **AWS SNS** - Most importantly, I had to create an SNS topic which is a logical access point that acts as a communication channel. Then to receive messages published to a topic, I had to create a subscription to an endpoint to the topic. When you subscribe an endpoint to a topic, the endpoint begins to receive messages published to the associated topic.
+4. 
 ![image](https://github.com/tanicha/sms-lambda/assets/91624779/d996dc78-505b-4401-b53f-8698e398126b)
 
 ---
@@ -29,7 +32,7 @@ This project uses powerful AWS services for a fully automated system for sending
 
 ---
 
-5. As you can see here, as soon as that file was uploaded - I received an SMS message discussing the content of the file and a link to the file itself.
+5. As you can see here, as soon as that file was uploaded - I received an SMS message discussing the content of the file and a link to the uploaded file itself.
 
 ![image](https://github.com/tanicha/sms-lambda/assets/91624779/68e67943-a3d3-46e0-8306-d5992b37d13e)
 
