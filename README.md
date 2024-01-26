@@ -21,7 +21,7 @@ In this documentation, we will go over the steps of this project - the idea is t
 ---
 
 3. **AWS SNS** - Most importantly, I had to create an SNS topic which is a logical access point that acts as a communication channel. Then to receive messages published to a topic, I had to create a subscription to an endpoint to the topic. When you subscribe an endpoint to a topic, the endpoint begins to receive messages published to the associated topic.
-4. 
+  
 ![image](https://github.com/tanicha/sms-lambda/assets/91624779/d996dc78-505b-4401-b53f-8698e398126b)
 
 ---
