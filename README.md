@@ -1,18 +1,21 @@
-## Multiverse Elective Project: Automating Text Messages with Amazon SNS and AWS Lambda
+# Multiverse Elective Project: Automating Text Messages with Amazon SNS and AWS Lambda
 
-This project uses powerful AWS services for a fully automated system for sending SMS notifications.
+  
+This project uses powerful AWS services to build a fully automated system for sending SMS notifications.
 
 In this documentation, we will go over the steps of this project - the idea is that we use an S3 bucket as a source to be able to upload files, which will then trigger the AWS Lambda which will execute the `sendSNS()` and publish a notification to an AWS SNS topic where we have configured a phone number to recieve a message whenever a subscription is published to the SNS.
 
-### How this service works: 
+<br>
 
-1. **AWS S3** - First, I had to create an S3 bucket, which is where all objects in S3 are stored. This is where I can upload files and folders to S3.
+## How this service works: 
+
+1. **AWS S3** - First, I had to create an S3 bucket, this is where all objects in S3 are stored and where I can upload files and folders to trigger the Lambda.
 
 ![image](https://github.com/tanicha/sms-lambda/assets/91624779/9420f067-cd7d-466d-a67d-0db33a3bbbd4)
 
 ---
 
-2. **AWS Lambda** - Secondly, I had to create my Lambda function, this is where the processing of the event is occurring, it is framing and creating that specific SMS message that will be sent to the configured phone numbers that we have setup in our SNS. This Lambda function has a trigger set up to invoke the given JavaScript code (can also be found in this repo).
+2. **AWS Lambda** - Secondly, I had to create my Lambda function. This is where the processing of the event occurs, it is framing and tuning that specific SMS message that will be sent to the configured phone numbers that we have setup in our SNS. This Lambda function has a trigger set up to invoke the given JavaScript code (can also be found in this repo).
 
 ![image](https://github.com/tanicha/sms-lambda/assets/91624779/dfad4fa3-fefc-4dd2-b988-474b3b7722f0)
 
@@ -34,6 +37,5 @@ In this documentation, we will go over the steps of this project - the idea is t
 
 5. As you can see here, as soon as that file was uploaded - I received an SMS message discussing the content of the file and a link to the uploaded file itself.
 
-![image](https://github.com/tanicha/sms-lambda/assets/91624779/68e67943-a3d3-46e0-8306-d5992b37d13e)
-
+![sms-msg](https://github.com/tanicha/messaging-service/assets/91624779/019d16c5-2beb-490d-ac78-c792a1280ec5)
 
